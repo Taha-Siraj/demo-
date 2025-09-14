@@ -1,8 +1,12 @@
 import express from 'express';
+import { configDotenv } from 'dotenv';
+import cors from 'cors';
 
 const app = express();
+configDotenv();
+app.use(cors());
+app.use(express.json());
 
-app.use(express.json())
 
 app.get('/', (req, res) => {
     res.send("api is working")
