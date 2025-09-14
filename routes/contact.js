@@ -15,6 +15,8 @@ router.get("/services", async (req, res) => {
 
 
 router.post("/Addservices", async (req, res) => {
+    let {  } = req.body;
+
     try {
         let allservices = await Contact.find()
         res.status(200).send(allservices)
